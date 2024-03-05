@@ -9,7 +9,6 @@
 		Italic,
 		List,
 		ListOrdered,
-		Strikethrough,
 		Minus,
 		Code,
 		Quote,
@@ -19,6 +18,13 @@
 		BetweenVerticalStart,
 		BetweenHorizontalStart
 	} from 'lucide-svelte';
+
+	function addImageUrl() {
+		const url = prompt('Enter the URL of the image:');
+		if (url) {
+			editor.commands.setImage({ src: url });
+		}
+	}
 </script>
 
 <div class="m-4 my-1 border border-input bg-transparent rounded-md">
@@ -106,6 +112,7 @@
 	>
 		<Quote class="h-4 w-4" />
 	</Button>
+	<Button variant="ghost" on:click={addImageUrl(editor)} size="sm">Image</Button>
 	<Button
 		variant="ghost"
 		on:click={() => editor.chain().focus().setHorizontalRule().run()}

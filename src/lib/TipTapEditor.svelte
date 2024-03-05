@@ -7,6 +7,7 @@
 	import TableCell from '@tiptap/extension-table-cell';
 	import TableHeader from '@tiptap/extension-table-header';
 	import TableRow from '@tiptap/extension-table-row';
+	import { Image as TipTapImage } from '@tiptap/extension-image';
 	import './styles.scss';
 
 	let element;
@@ -22,6 +23,7 @@
 				Table.configure({
 					resizable: true
 				}),
+				TipTapImage,
 				TableRow,
 				TableHeader,
 				TableCell
