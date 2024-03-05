@@ -4,31 +4,6 @@
 		margin-top: 0.75em;
 	}
 
-	h1 {
-		font-size: 2.5rem;
-	}
-
-	h2 {
-		font-size: 2rem;
-	}
-
-	h3 {
-		font-size: 1.75rem;
-	}
-
-	h4 {
-		font-size: 1.5rem;
-	}
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		line-height: 1.1;
-	}
-
 	code {
 		background-color: rgba(#9b1e1e, 0.1);
 		color: #616161;
@@ -50,9 +25,9 @@
 	}
 
 	// bullet points
-	ul {
-		list-style: disc;
-	}
+	// ul {
+	// 	list-style: disc;
+	// }
 
 	// numbered lists
 	ol {

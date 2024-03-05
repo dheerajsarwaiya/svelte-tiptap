@@ -18,7 +18,8 @@
 		BetweenVerticalStart,
 		BetweenHorizontalStart,
 		Image,
-		Video
+		Video,
+		Link
 	} from 'lucide-svelte';
 
 	function addImageUrl() {
@@ -28,12 +29,19 @@
 		}
 	}
 
-	function addYoutubeUrl() {
-		const url = prompt('Enter the URL of the image:');
-		if (url) {
-			editor.commands.setYoutubeVideo({ src: url });
-		}
-	}
+	// function addYoutubeUrl() {
+	// 	const url = prompt('Enter Youtube URL:');
+	// 	if (url) {
+	// 		editor.commands.setYoutubeVideo({ src: url });
+	// 	}
+	// }
+
+	// function addLink() {
+	// 	const url = prompt('Enter the URL of the link:');
+	// 	if (url) {
+	// 		editor.commands.toggleLink({ href: url, target: '_blank' });
+	// 	}
+	// }
 </script>
 
 <div class="m-4 my-1 border border-input bg-transparent rounded-md">
@@ -122,7 +130,8 @@
 		<Quote class="h-4 w-4" />
 	</Button>
 	<Button variant="ghost" on:click={addImageUrl} size="sm"><Image class="w-4 h-4" /></Button>
-	<Button variant="ghost" on:click={addYoutubeUrl} size="sm"><Video class="w-4 h-4" /></Button>
+	<!-- <Button variant="ghost" on:click={addYoutubeUrl} size="sm"><Video class="w-4 h-4" /></Button> -->
+	<!-- <Button variant="ghost" on:click={addLink} size="sm"><Link class="w-4 h-4" /></Button> -->
 	<Button
 		variant="ghost"
 		on:click={() => editor.chain().focus().setHorizontalRule().run()}
