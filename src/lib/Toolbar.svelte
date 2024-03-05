@@ -16,13 +16,22 @@
 		Redo,
 		Table,
 		BetweenVerticalStart,
-		BetweenHorizontalStart
+		BetweenHorizontalStart,
+		Image,
+		Video
 	} from 'lucide-svelte';
 
 	function addImageUrl() {
 		const url = prompt('Enter the URL of the image:');
 		if (url) {
 			editor.commands.setImage({ src: url });
+		}
+	}
+
+	function addYoutubeUrl() {
+		const url = prompt('Enter the URL of the image:');
+		if (url) {
+			editor.commands.setYoutubeVideo({ src: url });
 		}
 	}
 </script>
@@ -112,7 +121,8 @@
 	>
 		<Quote class="h-4 w-4" />
 	</Button>
-	<Button variant="ghost" on:click={addImageUrl(editor)} size="sm">Image</Button>
+	<Button variant="ghost" on:click={addImageUrl} size="sm"><Image class="w-4 h-4" /></Button>
+	<Button variant="ghost" on:click={addYoutubeUrl} size="sm"><Video class="w-4 h-4" /></Button>
 	<Button
 		variant="ghost"
 		on:click={() => editor.chain().focus().setHorizontalRule().run()}

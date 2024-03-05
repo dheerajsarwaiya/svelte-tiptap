@@ -8,6 +8,7 @@
 	import TableHeader from '@tiptap/extension-table-header';
 	import TableRow from '@tiptap/extension-table-row';
 	import { Image as TipTapImage } from '@tiptap/extension-image';
+	import { Youtube } from '@tiptap/extension-youtube';
 	import './styles.scss';
 
 	let element;
@@ -26,7 +27,10 @@
 				TipTapImage,
 				TableRow,
 				TableHeader,
-				TableCell
+				TableCell,
+				Youtube.configure({
+					controls: false
+				})
 			],
 			editable: editable,
 			editorProps: {
